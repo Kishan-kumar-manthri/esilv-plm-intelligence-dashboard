@@ -25,10 +25,8 @@ dist/
 .env
 .env.*
 
-# Données partenaires : jamais commitées
-data/raw/*
-!data/raw/.gitkeep
 
-# Aucun XML hors de docs/
+# Aucun XML hors de docs/ et data/raw/
 *.xml
 !docs/**/*.xml
+!data/raw/*.xml
