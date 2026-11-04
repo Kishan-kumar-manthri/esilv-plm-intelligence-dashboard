@@ -20,7 +20,7 @@ from styles import kpi, load_css, panel_end, panel_start
 from visuals import product_svg
 
 DATASET = ROOT / "data" / "raw" / "XPDMXML_ECAR_PLM.xml"
-GITHUB_URL = "https://github.com/quentin-trlt/hackathon-plm-intelligence-dassault-systems"
+GITHUB_URL = "https://github.com/Kishan-kumar-manthri/esilv-plm-intelligence-dashboard"
 AUTHOR_GITHUB_URL = "https://github.com/Kishan-kumar-manthri"
 AUTHOR_GITHUB_NAME = "Kishan-kumar-manthri"
 

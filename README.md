@@ -4,10 +4,8 @@
 
 - Dépôt GitHub : https://github.com/Kishan-kumar-manthri/esilv-plm-intelligence-dashboard
 - Profil GitHub : https://github.com/Kishan-kumar-manthri
-- Référence visuelle : https://dassault-systemes-plm-project.netlify.app/
 
-Le tableau de bord est une application Streamlit exécutée localement. Le site
-de référence est utilisé uniquement comme inspiration d'interface ; les
+Le tableau de bord est une application Streamlit exécutée localement. Les
 résultats affichés par cette application proviennent du fichier XML PLM fourni.
 
 Projet 7 du hackathon ESILV A5 DPM/PLM (4 au 6 novembre 2026), « PLM Intelligence Challenge », proposé par Dassault Systèmes.
