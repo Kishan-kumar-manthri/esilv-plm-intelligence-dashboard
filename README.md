@@ -85,4 +85,4 @@ TODO : la stack technique n'est pas encore figée. Cette section sera complété
 - Ayoub EL AMRANI
 - Shubham NAGNATH
 - Téo MAHIEU
-- ...
+- Kishan Kumar MANTHRI
