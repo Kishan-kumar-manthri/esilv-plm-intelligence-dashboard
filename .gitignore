@@ -26,6 +26,7 @@ dist/
 .env.*
 
 
-# Aucun XML hors de docs/
+# Aucun XML hors de docs/ et data/raw/
 *.xml
 !docs/**/*.xml
+!data/raw/*.xml
