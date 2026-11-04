@@ -18,7 +18,7 @@ Personne 3 : Lead Risques & « Product Intelligence » (Capacité 2)
 o	Définir et coder les règles métier de détection des risques (ex. composants à cycle de vie obsolète, pièces monopropriétaire/mono-fournisseur, pièces sans redondance). 
 o	Calculer un score de criticité pour chaque pièce et sous-ensemble. 
 o	Concevoir les indicateurs clés et synthèses visuelles (KPIs qualité, durabilité, alertes de dépendances fournisseur). 
-Personne 4 : Spécialiste Graphes & « Change Impact Analysis » (Capacité 3)
+Personne 4 : Spécialiste Graphes & « Change Impact Analysis » (Capacité 3) Téo
 •	Mission : Simuler les impacts d'une modification technique. 
 •	Tâches concrètes :
 o	Modéliser les relations entre pièces et assemblages sous forme de graphe de dépendances (ex. avec NetworkX). 
