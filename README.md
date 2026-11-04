@@ -81,6 +81,7 @@ TODO : la stack technique n'est pas encore figée. Cette section sera complété
 
 ## Équipe
 
+- Quentin TARLET
 - Chloé DAUNAS
 - Ayoub EL AMRANI
 - Shubham BOLLU
