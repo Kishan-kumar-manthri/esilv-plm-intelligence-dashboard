@@ -83,6 +83,6 @@ TODO : la stack technique n'est pas encore figée. Cette section sera complété
 
 - Chloé DAUNAS
 - Ayoub EL AMRANI
-- Shubham NAGNATH
+- Shubham BOLLU
 - Téo MAHIEU
 - Kishan Kumar MANTHRI
