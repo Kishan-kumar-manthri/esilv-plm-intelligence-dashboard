@@ -473,6 +473,22 @@ def overview(dataset) -> None:
         ("MATURITY STATE", "IN_WORK", "79 of 79 products", "warn"),
     ]):
         with col: kpi(*args)
+    st.subheader("Product visual library")
+    st.caption(
+        "Generated engineering visual aids for the products in the XML export. "
+        "They are visible directly in the dashboard; no external image service is required."
+    )
+    visual_products = [
+        dataset.root,
+        *[p for p in dataset.children(dataset.root.source.xml_id) if not p.is_leaf][:3],
+    ]
+    for column, product in zip(st.columns(len(visual_products)), visual_products):
+        with column:
+            st.markdown(
+                product_svg(product, len(dataset.children(product.source.xml_id))),
+                unsafe_allow_html=True,
+            )
+            st.caption(f"Rev {product.revision} · {product.mass_kg:.3f} kg · {product.item_kind.title()}")
     left, right = st.columns([1.25, 1])
     with left:
         panel_start("Product structure overview", "Reference objects by engineering role")
