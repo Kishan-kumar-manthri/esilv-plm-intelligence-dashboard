@@ -1,5 +1,15 @@
 # PLM Intelligence — transformer un extrait PLM en décisions traçables
 
+## Liens du projet
+
+- Dépôt GitHub : https://github.com/Kishan-kumar-manthri/esilv-plm-intelligence-dashboard
+- Profil GitHub : https://github.com/Kishan-kumar-manthri
+- Référence visuelle : https://dassault-systemes-plm-project.netlify.app/
+
+Le tableau de bord est une application Streamlit exécutée localement. Le site
+de référence est utilisé uniquement comme inspiration d'interface ; les
+résultats affichés par cette application proviennent du fichier XML PLM fourni.
+
 Projet 7 du hackathon ESILV A5 DPM/PLM (4 au 6 novembre 2026), « PLM Intelligence Challenge », proposé par Dassault Systèmes.
 
 Nous sommes l'équipe engineering et digital d'un fournisseur de moteurs électriques pour l'automobile. Notre client OEM pilote ses développements dans 3DEXPERIENCE et ne nous transmet qu'un extrait XML brut de la structure produit. L'application transforme cet extrait en informations exploitables pour décider sur le coût, le risque, la qualité et la durabilité : explorer la BOM, repérer les composants critiques et mesurer l'impact d'un changement de composant. Chaque information affichée renvoie à l'élément XML dont elle provient.
@@ -51,7 +61,41 @@ L'extrait XML de l'OEM se place dans `data/raw/`. Il s'agit de données partenai
 
 ## Installation et lancement
 
-TODO : la stack technique n'est pas encore figée. Cette section sera complétée avec les prérequis, l'installation des dépendances et la commande de lancement de l'application.
+Le projet utilise Python 3.10 ou plus récent, avec Streamlit pour l'interface et
+la bibliothèque XML standard de Python pour le parsing.
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -e ".[test]"
+python -m pytest -q
+streamlit run app/app.py
+```
+
+Le fichier fourni doit rester à l'emplacement
+`data/raw/XPDMXML_ECAR_PLM.xml`. L'application charge ce fichier au démarrage
+et affiche explicitement les informations absentes de l'export, notamment les
+fournisseurs et les coûts.
+
+### Modules implémentés
+
+- `src/plm/parser/` : modèle de données, parsing namespace-aware, résolution des
+  relations, quantités, validation des cycles et contrôle des masses.
+- `src/plm/analysis/` : statistiques, matériaux, risques explicables, recherche
+  et analyse d'impact parent/enfant.
+- `src/plm/agent/` : assistant local déterministe, limité aux données parsées et
+  citant les sources XML.
+- `app/app.py` : Dashboard, Product Explorer, Product Intelligence, Change
+  Impact Analysis, BOM Command Center, Parts & Assemblies, revision tracking
+  and assistant.
+- `app/visuals.py` : schémas visuels conceptuels par famille de pièce. Ils sont
+  explicitement présentés comme des aides visuelles, car l'export XML ne
+  contient pas de géométrie CAO.
+- `tests/` : tests sur le dataset réel, incluant chargement, champs, relations,
+  quantités, masse et impact.
+
+Les résultats calculés sont distingués des valeurs lues directement dans le
+XML. Aucune valeur de coût ou de fournisseur n'est inventée.
 
 ## Organisation de l'équipe
 
